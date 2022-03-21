@@ -33,6 +33,16 @@ public class p1 {
 		Scanner numChecker2;
 		Scanner tester;
 		Scanner firstLineGrabber;
+		boolean inCoordinate = false;
+		
+		for(String s : args) {
+			if(s.equals("--Incoordinate")) {
+				inCoordinate = true; 
+			}
+		}
+		
+		String fileName = args[args.length-1]; 
+	
 		File f = new File("aliMap1.txt");
 		File f2 = new File("aliCoordinateMap1.txt");
 
