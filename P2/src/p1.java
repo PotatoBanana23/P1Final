@@ -43,24 +43,32 @@ public class p1 {
 		
 		String fileName = args[args.length-1]; 
 	
-		File f = new File("aliMap1.txt");
-		File f2 = new File("aliCoordinateMap1.txt");
+		File f = new File(fileName);
+		//File f2 = new File("aliCoordinateMap1.txt");
 
 		try {
 			// code that might throw a special error
 			scanner = new Scanner(f);
 			scanner2 = new Scanner(f);
 			scanner3 = new Scanner(f);
-			scanner4 = new Scanner(f2);
+			scanner4 = new Scanner(f);
 			scanner5 = new Scanner(f);
 			scanner6 = new Scanner(f);
 			numChecker = new Scanner(f);
-			numChecker2 = new Scanner(f2);
-			tester = new Scanner(f2); 
+			numChecker2 = new Scanner(f);
+			tester = new Scanner(f); 
 			firstLineGrabber = new Scanner(f); 
 			
 			
 			//COMPLETING ERROR TESTS
+			
+			if(inCoordinate == false) {
+				char[][] tMap = templateBased(scanner3);
+				
+	
+			}
+			
+			
 			char[][] tMap = templateBased(scanner3);
 			char[][] cMap = coordinateBased2(tester);
 			String[][] convertTMap = new String[tMap.length][tMap[0].length];
